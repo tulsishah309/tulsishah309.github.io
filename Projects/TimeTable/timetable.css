@@ -20,6 +20,7 @@ button:focus { outline: none; }
   height: 650px;
   position: fixed;
   overflow:scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .sub{
     font-size:15px;
@@ -58,9 +59,10 @@ button:focus { outline: none; }
       display:inline;
       width: 100%;
       font-size: 10px;
-      
+    
       position: relative;
-     
+      overflow:scroll;
+  -webkit-overflow-scrolling: touch;
       
     }
     
