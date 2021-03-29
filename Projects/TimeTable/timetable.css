@@ -17,7 +17,9 @@ button:focus { outline: none; }
    
 }
 #days{
- overflow-y: scroll; height: 650px;position: fixed;
+  height: 650px;
+  position: fixed;
+  overflow:scroll;
 }
 .sub{
     font-size:15px;
@@ -49,7 +51,7 @@ button:focus { outline: none; }
  float:right;
  
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 800px) {
    
   
     #days{
