@@ -5,6 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="timetable.png" type="image" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Table</title>
 </head>
@@ -12,20 +13,20 @@
 </header>
 <body>
     <div class="col-sm-12">
-        <div class="col-sm-4"  style=" overflow-y: scroll; height: 650px;position: fixed;">
-            <h2 style="background-color: black; text-align: center; color: blanchedalmond; 
-            height: 70px;font-size: 50px;">Days</h2>
-            <button id="Monday" onclick="day(id)" style="width: 100%;" class="days">Monday</button>
-            <button id="Tuesday" onclick="day(id)" style="width: 100%;" class="days">Tuesday</button>
-            <button id="Wednesday" onclick="day(id)" style="width: 100%;" class="days">Wednesday</button>
-            <button id="Thursday" onclick="day(id)"  style="width: 100%;" class="days">Thursday</button>
-            <button id="Friday" onclick="day(id)"  style="width: 100%;" class="days">Friday</button>
-            <button id="Saturday" onclick="day(id)"  style="width: 100%;" class="days">Saturday</button>
+        <div class="head">
+        <div class="col-sm-4" id="days" >
+            <h2 class="day">Days</h2>
+            <button id="Monday" onclick="day(id)"  class="days">Monday</button>
+            <button id="Tuesday" onclick="day(id)"  class="days">Tuesday</button>
+            <button id="Wednesday" onclick="day(id)" class="days">Wednesday</button>
+            <button id="Thursday" onclick="day(id)" class="days">Thursday</button>
+            <button id="Friday" onclick="day(id)"   class="days">Friday</button>
+            <button id="Saturday" onclick="day(id)"   class="days">Saturday</button>
         </div>
-
-        <div class="col-sm-8" style="position: relative; float: right; " >
-            <div id="sunday">
-                <div>
+    </div>
+        <div class="col-sm-8" id="pannel" >
+           
+            <div id="sunday">    
                     <script>
                         var d = new Date();
                         var n = d.getDay();
@@ -33,8 +34,7 @@
                         if(n==0)
                         {
                             x.setAttribute("src", "https://media2.giphy.com/media/26BRynKeJEweP1r4Q/giphy.gif");
-                            x.setAttribute("width", "700");
-                            x.setAttribute("height", "600");
+                          
                             x.setAttribute("id","Imagev")
                             x.setAttribute("alt", "The Pulpit Rock");
                             document.body.appendChild(x);
@@ -46,10 +46,10 @@
                     </script>
                  </div>
                  <div class="monday" id="monday" style="display: none;">
-                      
-                      <h2 style="background-color: black; text-align: center;
-                       color: blanchedalmond; height: 70px;font-size: 50px;"> Monday Lectures </h2> 
-                    
+                    <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                      <h2 class="day"> Monday Lectures </h2> 
+                    </div>
                     <script>
                         
                         var d = new Date();
@@ -96,10 +96,11 @@
                                     <button class="sub" style="width: 100%;" onclick=" window.open('https://meet.google.com/fgi-rdhc-jqk')">Computer Graphics</button>
                                 </div>
                             </div>
-                            <div class="col-sm-11" style="border-bottom:black solid 1px;">
-                            <h2 style="background-color: black; text-align: center;
-                            color: blanchedalmond; height: 70px;font-size: 50px; width: 850px;">Monday Labs </h2>
+                            <div class="col-sm-12" style="border-bottom:black solid 1px;">
 
+                            <h2 class="day">Monday Labs </h2>
+                            </div>
+                            <div class="col-sm-11" style="border-bottom:black solid 1px;">
                               <div class="col-sm-3">
                                   <h4 style="text-align: center;">2:00 to 4:00</h4>
                                   </div>
@@ -111,8 +112,10 @@
                         </div>
                     <div class="tuesday" id="tuesday" style="display: none;">
                       
-                            <h2 style="background-color: black; text-align: center;
-                            color: blanchedalmond; height: 70px;font-size: 50px;"> Tuesday Lectures </h2> 
+                        <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                            <h2 class="day"> Tuesday Lectures </h2> 
+                          </div>
                           
                           <script>
                               
@@ -160,10 +163,12 @@
                                       
                                       </div>
                                   </div>
+                                  <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                                    <h2 class="day">Tuesday Labs</h2> 
+                                  </div>
                                   <div class="col-sm-11" style="border-bottom:black solid 1px;">
-                                    <h2 style="background-color: black; text-align: center;
-                                    color: blanchedalmond; height: 70px;font-size: 50px; width: 850px;">
-                                   Tuesday Labs </h2>
+                                   
                                   
                                     <div class="col-sm-3">
                                         <h4 style="text-align: center;">2:00 to 4:00</h4>
@@ -174,14 +179,15 @@
                                             
                                         
                                         </div>
-                                    </div>                                </div>
+                                    </div>                                
                               </div>
 
                               <div class="wednesday" id="wednesday" style="display: none;">
                       
-                                <h2 style="background-color: black; text-align: center;
-                                color: blanchedalmond; height: 70px;font-size: 50px;"> Wednesday Lectures </h2> 
-                              
+                                <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                                    <h2 class="day">Wednesday Lectures </h2> 
+                                  </div>
                               <script>
                                   
                                   var d = new Date();
@@ -228,9 +234,12 @@
                                           </div>
                                       </div>
                                      
+                                      <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                                        <h2 class="day">Wednesday Labs </h2> 
+                                      </div>
                                   <div class="col-sm-11" style="border-bottom:black solid 1px;">
-                                    <h2 style="background-color: black; text-align: center;
-                                    color: blanchedalmond; height: 70px;font-size: 50px; width: 850px;"> Wednesday Labs </h2>
+                                   
                                     <div class="col-sm-3">
                                         <h4 style="text-align: center;">2:00 to 4:00</h4>
                                         </div>
@@ -242,9 +251,10 @@
                                     </div>
                                   </div>
                                   <div class="thursday" id="thursday" style="display: none;">
-                      
-                                    <h2 style="background-color: black; text-align: center;
-                                    color: blanchedalmond; height: 70px;font-size: 50px;"> Thursday Lectures </h2> 
+                                    <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                                        <h2 class="day"> Thursday Lectures </h2> 
+                                      </div>
                                   
                                   <script>
                                       
@@ -290,10 +300,12 @@
                                               
                                               </div>
                                           </div>
+                                          <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                                            <h2 class="day"> Thursday Labs </h2> 
+                                          </div>
                                           <div class="col-sm-11" style="border-bottom:black solid 1px;">
-                                            <h2 style="background-color: black; text-align: center;
-                                            color: blanchedalmond; height: 70px;font-size: 50px; width: 850px;">Thursday Labs </h2>
-                                 
+                                           
                                     <div class="col-sm-3">
                                         <h4 style="text-align: center;">2:00 to 4:00</h4>
                                         </div>
@@ -307,8 +319,10 @@
                                       </div>
                                       <div class="friday" id="friday" style="display: none;">
                       
-                                        <h2 style="background-color: black; text-align: center;
-                                        color: blanchedalmond; height: 70px;font-size: 50px;"> Friday Lectures </h2> 
+                                        <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                                            <h2 class="day"> Friday Lectures </h2> 
+                                          </div>
                                       
                                       <script>
                                           
@@ -354,10 +368,12 @@
                                                   
                                                   </div>
                                               </div>
+                                              <div class="col-sm-12" style="border-bottom:black solid 1px;">
+
+                                                <h2 class="day"> Friday Labs</h2> 
+                                              </div>
                                               <div class="col-sm-11" style="border-bottom:black solid 1px;">
-                                                <h2 style="background-color: black; text-align: center;
-                                                color: blanchedalmond; height: 70px;font-size: 50px; width: 850px;">Friday Labs </h2>
-                                  
+                                               
                                     <div class="col-sm-3">
                                         <h4 style="text-align: center;">2:00 to 4:00</h4>
                                         </div>
@@ -389,8 +405,7 @@
                                       </script>
                                       
                                      
-                                    <h2 style="background-color: black; text-align: center;
-                                    color: blanchedalmond; height: 70px;font-size: 50px;"> Saturday Labs </h2>
+                                    <h2 class="day"> Saturday Labs </h2>
                                   <div class="col-sm-11" style="border-bottom:black solid 1px;">
                                     <div class="col-sm-3">
                                         <h4 style="text-align: center;">8:30 to 9:30</h4>

@@ -34,7 +34,7 @@ function day(id)
   thursday.style.display="none";
   friday.style.display="none";
   saturday.style.display="none";
- 
+  Imagev.remove();
  
   }
   else if(id=="Wednesday")
@@ -46,7 +46,7 @@ function day(id)
   thursday.style.display="none";
   friday.style.display="none";
   saturday.style.display="none";
-  
+  Imagev.remove();
   }
   else if(id=="Thursday")
   {
@@ -57,7 +57,7 @@ function day(id)
   monday.style.display="none";
   friday.style.display="none";
   saturday.style.display="none";
- 
+  Imagev.remove();
   }
   else if(id=="Friday")
   {
@@ -68,7 +68,7 @@ function day(id)
   thursday.style.display="none";
   monday.style.display="none";
   saturday.style.display="none";
- 
+  Imagev.remove();
   }
   else if(id=="Saturday")
   {
@@ -79,7 +79,7 @@ function day(id)
   thursday.style.display="none";
   friday.style.display="none";
   monday.style.display="none";
-  
+  Imagev.remove();
   }
 }
 
