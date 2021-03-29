@@ -56,7 +56,9 @@ button:focus { outline: none; }
     background-color: black;
 }
 @media only screen and (max-width: 767px) {
-   
+    .head{
+        background-color: black;
+    }
   
     #days{
       display:inline;
@@ -103,7 +105,5 @@ button:focus { outline: none; }
         width: 100% ; 
        
       }
-     .head{
-         background-color: black;
-     }
+     
   }
