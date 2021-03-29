@@ -49,7 +49,7 @@ button:focus { outline: none; }
  float:right;
  
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
    
   
     #days{
