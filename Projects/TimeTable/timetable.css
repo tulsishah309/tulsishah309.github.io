@@ -17,7 +17,7 @@ button:focus { outline: none; }
    
 }
 #days{
-  height: 600px;
+  height: 610px;
   position: fixed;
   overflow-y:scroll;
   -webkit-overflow-scrolling: touch;
@@ -54,6 +54,13 @@ button:focus { outline: none; }
 }
 .head{
     background-color: black;
+}
+@media only screen and (max-width: 900px)
+{
+    #days{
+        height: 500px;
+       
+      } 
 }
 @media only screen and (max-width: 767px) {
     .head{
