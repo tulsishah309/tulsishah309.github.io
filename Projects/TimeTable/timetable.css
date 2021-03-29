@@ -17,7 +17,7 @@ button:focus { outline: none; }
    
 }
 #days{
-  height: 500px;
+  height: 600px;
   position: fixed;
   overflow-y:scroll;
   -webkit-overflow-scrolling: touch;
