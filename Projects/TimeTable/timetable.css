@@ -17,7 +17,7 @@ button:focus { outline: none; }
    
 }
 #days{
-  height: 610px;
+  height: 600px;
   position: fixed;
   overflow-y:scroll;
   -webkit-overflow-scrolling: touch;
@@ -50,7 +50,7 @@ button:focus { outline: none; }
 }
 #pannel{
  float:right;
- 
+
 }
 .head{
     background-color: black;
