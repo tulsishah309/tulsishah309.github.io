@@ -63,9 +63,7 @@ button:focus { outline: none; }
       } 
 }
 @media only screen and (max-width: 767px) {
-    .head{
-        background-color: black;
-    }
+  
   
     #days{
       display:inline;
@@ -73,7 +71,7 @@ button:focus { outline: none; }
       font-size: 7px;
     
       position: relative;
-      overflow:scroll;
+      overflow:auto;
   -webkit-overflow-scrolling: touch;
       
     }
@@ -103,9 +101,11 @@ button:focus { outline: none; }
     }
     #Imagev{
         float: right;
-        height:80%;
+        height:100%;
         width: 100% ; 
        
       }
-     
+      .head{
+        background-color: black;
+    }
   }
