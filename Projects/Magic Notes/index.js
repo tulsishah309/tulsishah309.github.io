@@ -23,6 +23,7 @@ addnote.addEventListener('click',function(e){
     notesObj.push(myobj);
     localStorage.setItem("notes",JSON.stringify(notesObj));
     addtxt.value=""
+    addtitle.value=""
     showNotes();
    
 });
