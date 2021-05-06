@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>MagicNotes</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 </head>
@@ -25,7 +25,13 @@
    <h1> Hello, Welcome to magic notes !!! </h1>
 <div class="note" >
   <div class="note-body">
-    <h5 class="note-title">Add your Note</h5>
+    <div class="mb-3"> 
+      <label for="exampleInputEmail1" class="form-label">Add Title</label>
+      <div class="form-group">
+      <input type="text" class="form-control" id="notetitle" >
+    </div>
+  </div>
+    <label class="note-title">Add your Note</label>
     <div class="form-group">
       <label for="exampleFormControlTextarea1"></label>
       <textarea class="form-control" id="addtxt"  rows="3"></textarea>

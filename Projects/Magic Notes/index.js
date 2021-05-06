@@ -1,8 +1,12 @@
+let n = localStorage.getItem('notes');
+if(n!=null)
 showNotes();
+
 let addnote = document.getElementById("addnote");
 addnote.addEventListener('click',function(e){
-    
+    console.log("tulsi")
     let addtxt = document.getElementById('addtxt');
+    let addtitle = document.getElementById('notetitle');
     let notes = localStorage.getItem('notes');
     console.log(notes)
     if (notes == null)
@@ -12,7 +16,11 @@ addnote.addEventListener('click',function(e){
     else{
         notesObj = JSON.parse(notes);
     }
-    notesObj.push(addtxt.value);
+    let myobj={
+        title:addtitle.value,
+        txt:addtxt.value
+    }
+    notesObj.push(myobj);
     localStorage.setItem("notes",JSON.stringify(notesObj));
     addtxt.value=""
     showNotes();
@@ -29,14 +37,14 @@ function showNotes(){
         notesObj = JSON.parse(notes);
     }
     let html = " "
-    notesObj.forEach(function(element,index) {
+    notesObj.forEach(function(element) {
        
         html += `
         <div class="my-2 mx-2 noteCard" style="width: 18rem;">
           <div class="noteCard-body">
-            <h5 class="noteCard-title">Note ${index+1}</h5>
-            <p class="noteCard-text">${element}</p>
-            <button class="btn btn-primary" id="${index}" onclick="deleteNote(this.id)" >Delete Note</button>
+            <h5 class="noteCard-title"> ${element.title}</h5>
+            <p class="noteCard-text">${element.txt }</p>
+            <button class="btn btn-primary" id="${element.title}" onclick="deleteNote(this.id)" >Delete Note</button>
           </div>
           </div>`;
          
@@ -70,12 +78,12 @@ function deleteNote(index){
 let searchtxt = document.getElementById("searchtxt");
 searchtxt.addEventListener("input",function(){
     let inputVal = searchtxt.value.toLowerCase();
-    
     let noteCard = document.getElementsByClassName('noteCard');
     Array.from(noteCard).forEach(function(element){
        
         let txt = element.getElementsByTagName("p")[0].innerText.toLowerCase();
-        if (txt.includes(inputVal)){
+        let title = element.getElementsByTagName("h5")[0].innerText.toLowerCase();
+        if (txt.includes(inputVal)||title.includes(inputVal)){
             element.style.display = "block";
         }
         else
