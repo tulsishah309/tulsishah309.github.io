@@ -1,2 +1,13 @@
 # tulsishah309.github.io
-timetable
+TimeTable
+
+https://tulsishah309.github.io/Projects/TimeTable/
+
+MagicNotes
+
+https://tulsishah309.github.io/Projects/Magic%20Notes/
+
+
+Calculator
+
+https://tulsishah309.github.io/Projects/Calculator/
