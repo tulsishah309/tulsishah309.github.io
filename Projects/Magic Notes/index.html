@@ -18,7 +18,6 @@
       <a class="navbar-brand">MagicNotes</a>
       <form class="d-flex">
         <input class="form-control me-2" id="searchtxt" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </nav>
@@ -27,17 +26,14 @@
 <div class="note" >
   <div class="note-body">
     <div class="mb-3"> 
+      <form action="/action_page.php">
       <label for="exampleInputEmail1" class="form-label">Add Title</label>
-      <div class="form-group">
-      <input type="text" class="form-control" id="notetitle" >
-    </div>
+      <input  type="text" class="form-control" id="notetitle"  required>
+      <label class="note-title">Add your Note</label>
+      <textarea required  class="form-control" id="addtxt"  rows="3"></textarea>
+      <button class="btn btn-primary my-3"type="submit" id="addnote">Add Note</a>
+      </form>
   </div>
-    <label class="note-title">Add your Note</label>
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1"></label>
-      <textarea class="form-control" id="addtxt"  rows="3"></textarea>
-    </div>
-    <button class="btn btn-primary" id="addnote">Add Note</a>
   </div>
 </div>
 <hr>

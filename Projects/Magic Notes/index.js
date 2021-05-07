@@ -4,7 +4,6 @@ showNotes();
 
 let addnote = document.getElementById("addnote");
 addnote.addEventListener('click',function(e){
-    console.log("tulsi")
     let addtxt = document.getElementById('addtxt');
     let addtitle = document.getElementById('notetitle');
     let notes = localStorage.getItem('notes');
@@ -16,6 +15,8 @@ addnote.addEventListener('click',function(e){
     else{
         notesObj = JSON.parse(notes);
     }
+    if(addtxt.value!=""&&addtitle.value!="")
+    {
     let myobj={
         title:addtitle.value,
         txt:addtxt.value
@@ -24,6 +25,7 @@ addnote.addEventListener('click',function(e){
     localStorage.setItem("notes",JSON.stringify(notesObj));
     addtxt.value=""
     addtitle.value=""
+    }
     showNotes();
    
 });
@@ -41,14 +43,14 @@ function showNotes(){
     notesObj.forEach(function(element) {
        
         html += `
-        <div class="my-2 mx-2 noteCard" style="width: 18rem;">
-          <div class="noteCard-body">
+        <div class="my-2 mx-2 noteCard" style= "width: 18rem; " >
+          <div class="noteCard-body" >
             <h5 class="noteCard-title"> ${element.title}</h5>
             <p class="noteCard-text">${element.txt }</p>
-            <button class="btn btn-primary" id="${element.title}" onclick="deleteNote(this.id)" >Delete Note</button>
-          </div>
+            </div>
+            <button class="btn btn-danger" id="${element.title}" onclick="deleteNote(this.id)" >Delete Note</button>
+           
           </div>`;
-         
     });
     let notesEle = document.getElementById('notes');
     if(notes.length!=0)
@@ -76,6 +78,7 @@ function deleteNote(index){
 
 
 }
+
 let searchtxt = document.getElementById("searchtxt");
 searchtxt.addEventListener("input",function(){
     let inputVal = searchtxt.value.toLowerCase();
